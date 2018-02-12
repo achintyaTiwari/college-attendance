@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Your Attendance
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+<p>{{attendance}}/{{totalAttendance}}</p>
+
+<button ion-button (click)="editAttendance()">Did you attend all classes today ?</button>
+<button ion-button (click)="extraClasses()">Did you attend any extra classes today ?</button>
+</ion-content>
