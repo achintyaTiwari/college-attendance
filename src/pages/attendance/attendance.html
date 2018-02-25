@@ -15,5 +15,12 @@
 
 <ion-content padding>
 <p>how much classes did you attend today ?</p>
-<input type="text" name="attendance" [value]="attendance">
+<form #f ="ngForm" (ngSubmit)= "onSubmit(f)"> 
+<input type="text" name="attendance" ngModel required>
+<button ion-button [disabled]=!f.valid>Submit</button>
+<h3 *ngIf=f.valid>Now your attendance percentage is</h3>
+<h3 *ngIf=f.valid>{{attendancePercentage}}</h3>
+
+</form>
+
 </ion-content>

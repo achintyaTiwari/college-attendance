@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>student</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<form #f ="ngForm" (ngSubmit)= "onSubmit(f)">
+<label for="classDid">Number of lectures attended till date</label> 
+<input type="text" name= "classDid" id = "classDid" ngModel required>
+<label for="classTotal">Number of lectures till date</label> 
+<input type="text" name= "classTotal" id = "classTotal" ngModel required>
+<button ion-button [disabled]=!f.valid>Submit</button>
+
+</ion-content>
